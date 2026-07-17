@@ -36,7 +36,10 @@ Action / Key
 
  # //CURRENT PROGRESS
 
-wip
+ 
+--V0
+  
+- Player model
 
 
 # //ROADMAP
