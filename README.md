@@ -41,6 +41,7 @@ Action / Key
   
 - Player model
 
+- Idle and walking animation
 
 # //ROADMAP
 
