@@ -70,13 +70,17 @@ Action / Key
 
  - Downing system
 
- - More gamemodes [INFLUENCE, Golf]
+ - 14 new weapons [9 melees, 5 firearms]
+
+ - More gamemodes [INFLUENCE, Teams]
 
  - Improved ambience, textures, models and audio
 
  - First half of campaign
 
    --- Release
+
+ - 4 new weapons [Melees], Full weapon roster
 
  - Full campaign
 
@@ -137,7 +141,7 @@ Donav4n!
 
 DEVELOPERS: 
 
-Donav4n! [MAIN/LEAD]
+Donav4n! [3D/SIMPLE SCRIPTS]
 
 RandomAndrew [3D/TEXTURING]
 
