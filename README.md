@@ -22,11 +22,15 @@ wip
 Action / Key
 -------------
 - Move / WASD 
-- Jump / Space 
+- Jump / Space
+- Interact / F
 - Sprint / LeftShift 
-- Slide / C
+- Dash / E
+- Dropkick / Dash + Jump
 - Crouch / LeftCtrl
-- Attack / LeftMouse 
+- Slide / Crouch + Sprint
+- Attack / LeftMouse
+- Ability / RightMouse
 
 
  # //DOWNLOAD
