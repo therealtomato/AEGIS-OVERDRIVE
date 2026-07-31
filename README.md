@@ -43,6 +43,8 @@ Action / Key
 
 - Idle and walking animation
 
+- Movement scripts
+
 # //ROADMAP
 
 --- Alpha
@@ -63,8 +65,6 @@ Action / Key
 
  - Gamemodes [Hardcore, Lenient]
 
- - Sandbox Mode
-
  - Settings [Accessibility, Controls, Graphics]
 
 --- Semi-Release
@@ -73,23 +73,27 @@ Action / Key
 
  - 14 new weapons [9 melees, 5 firearms]
 
- - More gamemodes [INFLUENCE, Teams]
+ - Sandbox Mode
+
+ - More Gamemodes [Teams]
 
  - Improved ambience, textures, models and audio
 
  - First half of campaign
 
-   --- Release
+   --- First Release
 
  - 4 new weapons [Melees], Full weapon roster
 
  - Full campaign
 
+ - More Gamemodes [INFLUENCE, Skating, Chaos]
+
  - Lots of QOL changes
 
  -  New settings categories [Fun, Misc, Audio]
 
- - Steam release ($4)
+ - Steam release ($1)
 
 
 # //REQUIREMENTS
@@ -106,18 +110,18 @@ Action / Key
 
 # //CONTRIBUTIONS
 
-Any contributions are welcome! If you contributed, DM Donavan's Discord profile if you want the Contributor role.
+Any contributions are welcome! If you contributed, DM Dona's Discord profile if you want the Contributor role.
 
 
 //CONTACT
 
-- Donav4n!
+- Dona!
 
-Discord: Donav4n! (donavanlol) [DM's only for friends]
+Discord: Dona! (donaa_lol) [DM's only for friends]
 
 Email: theslyxedguy@gmail.com
 
-YouTube: Donav4n! (@donavanlol)
+YouTube: Dona! (@donaa_lol)
 
 - RandomAndrew
 
@@ -137,7 +141,7 @@ RandomAndrew
 
 CO-OWNER 
 
-Donav4n!
+Dona!
 
 
 DEVELOPERS: 
