@@ -27,7 +27,7 @@ Action / Key
 - Sprint / LeftShift 
 - Dash / E
 - Dropkick / Dash + Jump
-- Crouch / LeftCtrl
+- Crouch / C
 - Slide / Crouch + Sprint
 - Attack / LeftMouse
 - Ability / RightMouse
