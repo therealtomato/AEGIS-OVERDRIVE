@@ -6,15 +6,20 @@ AEGIS//OVERDRIVE is a fast-paced movement FFA [Free For All] game set in a ruine
 
 # //FEATURES
 
-- High-speed movement
-- Fast-paced arena combat
-- Multiplayer
-- Advanced weapon mechanics
-- Dynamic maps
+-High-speed movement
+
+-Fast-paced arena combat
+
+-Multiplayer
+
+-Advanced weapon mechanics
+
+-Dynamic maps
+
 
 # //SCREENSHOTS
 
-wip
+TBA
 
 
 # //CONTROLS
@@ -35,69 +40,54 @@ Action / Key
 
  # //DOWNLOAD
 
- COMING SOON
+TBA
 
 
  # //CURRENT PROGRESS
 
+ -Player model
+ -Most movement mechanics
+ -Part of CALIBRATION [Tutorial]
  
----V0
-  
-- Player model
-
-- Idle and walking animation
-
-- Movement scripts
-
+ 
 # //ROADMAP
 
---- Alpha
+## Alpha
 
  - Core gameplay
-
  - 7 weapons [5 melees, 2 firearms]
-
  - 2 maps
 
---- Beta
+## Beta
 
  - 3 more maps
-
  - A ton of bugfixes
-
  - 5 new weapons [2 melees, 3 firearms]
-
  - Gamemodes [Hardcore, Lenient]
-
  - Settings [Accessibility, Controls, Graphics]
 
---- Semi-Release
+## Gamma
 
  - Downing system
+ - New Gamemode [Chaos]
+ - 6 New weapons [5 melees, 1 firearm]
 
- - 14 new weapons [9 melees, 5 firearms]
+## Semi-Release
 
+ - 9 New weapons [6 melees, 3 firearms]
  - Sandbox Mode
-
  - More Gamemodes [Teams]
-
  - Improved ambience, textures, models and audio
-
  - First half of campaign
 
-   --- First Release
+ ## First Release
 
- - 4 new weapons [Melees], Full weapon roster
-
+ - 4 new weapons [2 Melees, 1 firearm]
  - Full campaign
-
- - More Gamemodes [INFLUENCE, Skating, Chaos]
-
+ - More Gamemodes [INFLUENCE, Skating]
  - Lots of QOL changes
-
  -  New settings categories [Fun, Misc, Audio]
-
- - Steam release ($1)
+ - Steam release ($2)
 
 
 # //REQUIREMENTS
