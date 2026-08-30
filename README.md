@@ -45,9 +45,9 @@ TBA
 
  # //CURRENT PROGRESS
 
- -Player model
- -Most movement mechanics
- -Part of CALIBRATION [Tutorial]
+ - Player model
+ - Most movement mechanics
+ - Part of CALIBRATION [Tutorial]
  
  
 # //ROADMAP
@@ -104,26 +104,26 @@ TBA
 
 # //CONTRIBUTIONS
 
-Any contributions are welcome! If you contributed, DM Dona's Discord profile if you want the Contributor role.
+Any contributions are welcome <3
+
+If you contributed, create a ticket in the Discord if you want the Contributor role.
 
 
 //CONTACT
 
-- Dona!
+- Dona
 
-Discord: Dona! (donaa_lol) [DM's only for friends]
+Discord: donaa_lol
 
-Email: theslyxedguy@gmail.com
-
-YouTube: Dona! (@donaa_lol)
+YouTube: Dona (@donaa_lol)
 
 - RandomAndrew
 
 Discord: Random_andrew (random_andrew) [DM's only for friends]
 
-Email: randomandrew.AEGIS@yahoo.com
+Email [A//O]: aegisoverdrive.game@gmail.com
 
-YouTube: AEGIS//OVERDRIVE (@AEGISOVERDRIVE.Devteam)
+YouTube [A//O]: AEGIS//OVERDRIVE (@AEGISOVERDRIVE.Devteam)
 
 
 # //CREDITS
@@ -135,14 +135,14 @@ RandomAndrew
 
 CO-OWNER 
 
-Dona!
+Dona
 
 
 DEVELOPERS: 
 
-Donav4n! [3D/SIMPLE SCRIPTS]
+Dona [SCRIPTING/ARTIST]
 
-RandomAndrew [3D/TEXTURING]
+RandomAndrew [3D/TEXTURING/ANIMATOR]
 
 
 # //LICENSE
@@ -150,3 +150,5 @@ RandomAndrew [3D/TEXTURING]
 This project has no open-source license.
 All rights are reserved.
 The source code may not be copied, redistributed, or used without permission.
+
+
