@@ -2,131 +2,137 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public CharacterController controller;
-    public Transform model;
 
-    public float walkspd = 3.25f;
-    public float runspd = 9f;
-    public float crouchspd = 2.5f;
-    public float slidespd = 12f;
-    public float maxSlidespd = 22.5f;
-    public float minSlidespd = 5f;
+    public float walkSpd = 3.5f;
+    public float runSpd = 9f;
+    public float crouchSpd = 2.5f;
+    public float slideSpd = 12f;
     public float speed;
-    private float currentSlidespd;
-
-    public bool sprinting = false;
-    public bool cansprint = true;
-    public bool isMoving = false;
-
-    public bool crouching = false;
-    public bool sliding = false;
 
     public float maxStam = 300f;
-    public float currentStam = 300f;
-    public float stamDrainPersec = 15f;
-    public float stamRegenPersec = 25f;
-    public float stamRegendelay = 0.5f;
-    private float timeSincelastSprint;
+    public float stam;
+    public float regenPersec = 25f;
+    public float drainPersec = 18.75f;
+    public float regenDelay = .5f;
+    private float lastsprintTime;
+
+    public bool canSprint = true;
+    public bool canCrouch = true;
+    public bool canSlide = true;
+    public bool canDash = true;
+    public bool canJump = true;
+    public bool sprinting = false;
+    public bool crouching = false;
+    public bool sliding = false;
+    public bool isMoving = false;
 
     public float gravity = -9.81f;
-    private float verticalVelocity;
+    [SerializeField] private float verticalVelocity;
+    public float jumpHeight = 2f;
+
+    private bool wasGrounded;
+    public bool landed;
+    public bool airborne;
 
     void Start()
     {
-        currentStam = maxStam;
-        speed = walkspd;
+        stam = maxStam;
     }
 
-void Sprint()
-{
-    if (Input.GetKey(KeyCode.LeftShift) && currentStam > 0 && cansprint && isMoving && !crouching && !sliding)
+    void Sprint()
     {
-        sprinting = true;
-        currentStam -= stamDrainPersec * Time.deltaTime;
-        timeSincelastSprint = Time.time;
-    }
-    else
-    {
-        sprinting = false;
-        if (Time.time - timeSincelastSprint >= stamRegendelay)
+        if (Input.GetKey(KeyCode.LeftShift) && stam > 0 && canSprint && isMoving)
         {
-            currentStam += stamRegenPersec * Time.deltaTime;
-        }
-    }
-
-    currentStam = Mathf.Clamp(currentStam, 0f, maxStam);
-}
-
-void Slide()
-{
-    RaycastHit hit;
-
-    if (Physics.Raycast(transform.position, Vector3.down, out hit, 2f))
-    {
-        Vector3 groundNormal = hit.normal;
-        Vector3 downhill = Vector3.ProjectOnPlane(Vector3.down, groundNormal).normalized;
-
-        float slopeAmount = Vector3.Dot(downhill, transform.forward);
-        if (slopeAmount > 0)
-        {
-            currentSlidespd += slopeAmount * 20f * Time.deltaTime;
+            sprinting = true;
+            lastsprintTime = Time.time;
+            stam -= (drainPersec * Time.deltaTime);
         }
         else
         {
-            currentSlidespd += slopeAmount * 10f * Time.deltaTime;
+            sprinting = false;
+            if (Time.time - lastsprintTime >= regenDelay)
+            {
+                stam += (regenPersec * Time.deltaTime);
+            }
         }
-        currentSlidespd = Mathf.Clamp(currentSlidespd, 0f, maxSlidespd);
-        controller.Move(transform.forward * currentSlidespd * Time.deltaTime);
+            stam = Mathf.Clamp(stam, 0, maxStam);
     }
-}
-    
-    void Update()
-    {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
 
-        Vector3 movement = transform.right * x + transform.forward * z;
-
-        isMoving = movement.magnitude > 0.1f;
-
-        Sprint();
-
-        if (sliding)
+    void Crouch()
 {
-    Slide();
-}
-else
-{
-    currentSlidespd = slidespd;
-
-    model.localRotation = Quaternion.Slerp(
-        model.localRotation,
-        Quaternion.identity,
-        8f * Time.deltaTime
-    );
-
-    if (crouching)
+    if (Input.GetKey(KeyCode.C) && sprinting && canSlide)
     {
-        speed = crouchspd;
+        sliding = true;
+        crouching = false;
     }
-    else if (sprinting)
+    else if (Input.GetKey(KeyCode.C) && canCrouch)
     {
-        speed = runspd;
+        crouching = true;
+        sliding = false;
     }
     else
     {
-        speed = walkspd;
+        sliding = false;
+        crouching = false;
     }
-
-    stamDrainPersec = 15f;
 }
-        controller.Move(movement * speed * Time.deltaTime);
 
-        if (controller.isGrounded && verticalVelocity < 0)
-        {
-            verticalVelocity = -2f;
-        }
-        verticalVelocity += gravity * Time.deltaTime;
-        controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
+    void Update()
+{
+    float x = Input.GetAxis("Horizontal");
+    float z = Input.GetAxis("Vertical");
+    Vector3 movement = transform.right * x + transform.forward * z;
+
+    isMoving = movement.magnitude > 0f;
+
+    
+
+    Sprint();
+    Crouch();
+    
+   if (sliding)
+   {
+    speed = slideSpd;
+   }
+   else if (sprinting)
+   {
+    speed = runSpd;
+   }
+   else if (crouching)
+   {
+    speed = crouchSpd;
+   }
+   else if (!crouching && !sprinting && !sliding && isMoving)
+   {
+    speed = walkSpd;
+   }
+   else
+   {
+    speed = 0;
+   }
+
+    if (controller.isGrounded && verticalVelocity < 0)
+    {
+        verticalVelocity = -2f;
     }
+    
+    if (Input.GetButtonDown("Jump") && controller.isGrounded)
+    {
+        verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+    }
+
+    verticalVelocity += gravity * Time.deltaTime;
+    Vector3 velocity = movement * speed;
+    velocity.y = verticalVelocity;
+    
+    controller.Move(velocity * Time.deltaTime);
+    
+    bool isGrounded = controller.isGrounded;
+    landed = !wasGrounded && isGrounded;
+    airborne = !isGrounded;
+    
+    wasGrounded = isGrounded;
+}
 }
