@@ -47,6 +47,7 @@ TBA
 
  - Player model
  - Most movement mechanics
+ - Status HUD
  - Part of CALIBRATION [Tutorial]
  
  
@@ -55,7 +56,7 @@ TBA
 ## Alpha
 
  - Core gameplay
- - 7 weapons [5 melees, 2 firearms]
+ - 6 weapons [5 melees, 1 firearm]
  - 2 maps
 
 ## Beta
@@ -70,7 +71,7 @@ TBA
 
  - Downing system
  - New Gamemode [Chaos]
- - 6 New weapons [5 melees, 1 firearm]
+ - 6 New weapons [5 melees, 2 firearms]
 
 ## Semi-Release
 
@@ -101,7 +102,6 @@ TBA
    GPU: wip
 
    
-
 # //CONTRIBUTIONS
 
 Any contributions are welcome <3
