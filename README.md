@@ -2,6 +2,7 @@
 
 AEGIS//OVERDRIVE is a fast-paced movement FFA [Free For All] game set in a ruined world where combat robots stylishly fight for survival. [CURRENTLY IN DEVELOPMENT]
 
+## !!THIS PAGE IS DISCONTINUED!!
 
 
 # //FEATURES
