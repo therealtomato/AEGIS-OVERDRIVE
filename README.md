@@ -114,9 +114,9 @@ If you contributed, create a ticket in the Discord if you want the Contributor r
 
 - Dona
 
-Discord: donaa_lol
+Discord: donaalol_
 
-YouTube: Dona (@donaa_lol)
+YouTube: Dona (@donaalol)
 
 - RandomAndrew
 
